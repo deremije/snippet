@@ -1,0 +1,216 @@
+body {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    transition: all 150ms;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    .topRow {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 25em 25em;
+        grid-gap: .2em;
+        .sizersPlusText {
+            display: grid;
+            grid-template-columns: 3em 1fr;
+            .sizeAdjusters {
+                margin-top: 1.2em;
+                .sizer {
+                    padding-top: .5em;
+                    padding-bottom: .5em;
+                    margin-top: .2em;
+                    margin-bottom: .2em;
+                    background-color: #eeeeee;
+                    color: black;
+                    font-weight: 700;
+                    font-size: 1.6em;
+                    border-radius: 5px;
+                    height: .6em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .sizer:hover {
+                    cursor: pointer;
+                }
+            }
+            .inputBox {
+                margin: .5em;
+                #inputWrapper {
+                    position: relative;
+                    top: .5em;
+                    #input {
+                        width: calc(100vw - 40em);
+                        margin-top: .6em;
+                        height: 5vh;
+                        font-size: 1.6em;
+                    }
+                }
+            }
+        }
+        
+        .addButton {
+            background-color: #459bd4;
+            color: white;
+            font-weight: 700;
+            font-size: 1.6em;
+            max-height: 1.2em;
+        }
+        
+        .clearButton {
+            /* removes all buttons from memory and reloads page */
+            background-color: rgb(206, 119, 119);
+            color: white;
+            font-weight: 700;
+            font-size: 1.6em;
+            max-height: 1.2em;
+        }
+        .clearButton:hover {
+            cursor: pointer;
+        }
+    }
+    #buttonSpace {
+        width: 95%;
+        margin: auto;
+        margin-top: .5em;
+        display: flex;
+        flex-wrap: wrap;
+        .nodeProperties {
+            display: flex;
+            flex-wrap: nowrap;
+            .cancel {
+                /* small red circle with X, used to remove a snippet */
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                background-color: rgb(206, 119, 119);
+                color: white;
+                font-size: 1em;
+                font-weight: 700;
+                align-self: center;
+                margin-right: 1em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .cancel:hover {
+                cursor: pointer;
+            }
+        }
+    }    
+}
+
+.button {
+    /* standards for all snippet buttons */
+    background-color: #eeeeee;
+    color: black;
+    padding: 1em;
+    margin-right: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    max-width: calc(100vw - 5em);
+    font-size: 1.6em;
+}
+.button:hover {
+    cursor: pointer;
+}
+a:link {
+    color: #459bd4;
+    text-decoration: none;
+}
+a:visited {
+    color: #459bd4;
+    text-decoration: none;
+}
+a:hover {
+    color: #459bd4;
+    text-decoration: none;
+}
+a:active {
+    color: #459bd4;
+    text-decoration: none;
+}
+
+#buttons {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+
+#text {
+    position: fixed;
+    left: -10000px;
+}
+#overlay {
+    /* pops up on copy or clear all */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #459bd4;
+    color: white;
+    opacity: 0;
+    transition: all 150ms;
+    z-index: -1;
+    display: flex;
+    #inner {
+        margin: auto;
+        align-self: center;
+    }
+}
+
+.attributionWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .attribution {
+        font-size: 1rem;
+        font-weight: 700;
+        width: 6em;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin: auto;
+        padding: 1rem;
+    
+    }
+}
+
+
+
+@media only screen and (max-width: 880px) {
+    #topRow {
+        grid-template-columns: 1fr 20em 20em;
+    }
+    #input {
+        width: calc(100vw - 31em);
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #topRow {
+        grid-template-columns: 1fr;
+    }
+    #sizersPlusText {
+        grid-gap: 0px;
+        align-items: center;
+        justify-content: start;
+    }
+    #input {
+        width: calc(100vw - 8em);
+    }
+}

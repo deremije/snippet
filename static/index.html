@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta credits="Created June 13, 2018 by Jeremy Randall in Austin, Texas / Contact jeremyrandall1980@gmail.com / http://snippet.deremije.com / Best viewed on desktop with Google Chrome.">
+    <title>
+        Snippet! by đeremije
+    </title>
+    <script src="snippet.js"></script>
+    <link rel="stylesheet" href="snippet.css">
+</head>
+
+<body>
+    <div class="topRow">
+        <div class="sizersPlusText">
+            <div class="sizeAdjusters"> <!-- increase and decrease element size -->
+                <div onclick="increaseSize()" class="sizer">+</div>
+                <div onclick="decreaseSize()" class="sizer">-</div>
+            </div>
+
+            <div class="inputBox">  <!-- space for entering text to make a new button -->
+                <form id="inputWrapper">
+                    <textarea id="input"></textarea>
+                </form>
+            </div>
+        </div>
+    
+        <div class="button addButton">
+            Snippet! <!-- click after entering text to make button -->
+        </div> 
+        
+        <div class="button clearButton">
+            Clear All Snippets <!-- clears all buttons -->
+        </div>
+    </div>
+
+    <div id="buttonSpace">
+        <!-- all buttons go here -->
+    </div>
+    
+    <div>
+        <form id="copy">
+            <textarea id="text"></textarea> <!-- hidden by moving off screen -->
+        </form>
+    </div>
+    <div id="overlay"> <!-- fixed position covers entire screen, hides using z-index -->
+        <div id="inner"></div>
+    </div>
+    <div class="attributionWrapper">
+        <div class="attribution">
+            <a href="https://www.deremije.com">ĐEREMIJE</a>
+        </div>
+    </div>
+</body>
